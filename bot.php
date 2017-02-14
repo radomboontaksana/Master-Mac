@@ -57,7 +57,7 @@ if (!is_null($events['events'])) {
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' => $touserid,
+				'to' => 'U554a18dbd36996fdb3dd95c218cf6db0',
 				'messages' => [$messages]
 			];
 			$post = json_encode($data);
