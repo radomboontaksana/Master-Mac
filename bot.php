@@ -89,7 +89,7 @@ if (!is_null($events['events'])) {
 			$events = json_decode($result, true);
 			// Make Push Messageing
 			$displayName = $events['displayName'];
-			$userId = $events['userId'];
+			$groupId = $events['groupId'];
 			$text = $displayName." Group\n".$groupId;
 			$messages = [
 				'type' => 'text',
