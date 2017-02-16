@@ -85,10 +85,9 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			echo $result . "\r\n";
 			$events = json_decode($result, true);
-			 Make Push Messageing
-			$displayName = $events['groupName'];
+			// Make Push Messageing
+			$displayName = $events['displayName'];
 			//$groupId = $events['groupId'];
 			//$text = $displayName." Group\n".$groupId;
 			$text = $displayName." Group\n".$togroupid;
