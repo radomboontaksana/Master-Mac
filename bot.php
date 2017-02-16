@@ -12,6 +12,8 @@ if (!is_null($events['events'])) {
 		if (($event['type'] == 'follow') or ($event['type'] == 'join')) {
 			// Get user follow or join me
 			$touserid = $event['source']['userId'];
+			$toroomid = $event['source']['roomId'];
+			$togroupid = $event['source']['groupId'];
 			// Gen Text Reply
 			$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
@@ -49,7 +51,46 @@ if (!is_null($events['events'])) {
 			// Make Push Messageing
 			$displayName = $events['displayName'];
 			$userId = $events['userId'];
-			$text = $displayName."\n".$userId;
+			$text = $displayName." User\n".$userId;
+			$messages = [
+				'type' => 'text',
+				'text' => $text
+				//.'\nRequest '.$reqtext
+			];
+			$url = 'https://api.line.me/v2/bot/message/push';
+			$data = [
+				'to' => 'U554a18dbd36996fdb3dd95c218cf6db0',
+				'messages' => [$messages]
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
+
+			echo $result . "\r\n";
+			
+			// Find Group Data
+			$url = 'https://api.line.me/v2/bot/profile/'.$togroupid;
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			$result = curl_exec($ch);
+			curl_close($ch);
+			//echo $result . "\r\n";
+			$events = json_decode($result, true);
+			// Make Push Messageing
+			$displayName = $events['displayName'];
+			$userId = $events['userId'];
+			$text = $displayName." Group\n".$groupId;
 			$messages = [
 				'type' => 'text',
 				'text' => $text
