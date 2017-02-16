@@ -77,7 +77,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 			
 			// Find Group Data
-			$url = 'https://api.line.me/v2/bot/profile/'.$togroupid;
+			$url = 'https://api.line.me/v2/bot/group/'.$togroupid;
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
