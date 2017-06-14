@@ -11,7 +11,7 @@ function t1($tt1)
 }
 $StrGet = $_GET["strget"];
 $text = $StrGet;
-$text = "Test";
+//$text = "Test";
 	
 	
 if (!is_null($text)) {
