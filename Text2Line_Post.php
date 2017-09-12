@@ -23,7 +23,7 @@ if (!is_null($text)) {
 	$messages = t1($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cff6b78bc839c9f764ffff0f066606681',
+  		'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
