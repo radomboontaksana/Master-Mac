@@ -332,7 +332,7 @@ if (!is_null($text)) {
 	$messages = temp2imgcol($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+  		'to' => 'U201d98f3c6c619f0e32117a0abceec1e',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
