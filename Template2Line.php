@@ -263,7 +263,7 @@ if (!is_null($text)) {
 //if (!empty($_POST)){
 	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
 	//$messages = t1($text);
-	$messages = temp2butt($text);
+/*	$messages = temp2butt($text);
 	//$messages = temp2comf($text);
 	//$messages = temp2caro($text);
 	//$messages = temp2imgcol($text);
@@ -286,7 +286,7 @@ if (!is_null($text)) {
 	$result = curl_exec($ch);
 	curl_close($ch);
 	echo $result . "\r\n";
-	
+ 	
 	$messages = temp2comf($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
@@ -328,7 +328,7 @@ if (!is_null($text)) {
 	$result = curl_exec($ch);
 	curl_close($ch);
 	echo $result . "\r\n";
-	
+*/	
 	$messages = temp2imgcol($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
