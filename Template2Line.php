@@ -275,7 +275,8 @@ if (!is_null($text)) {
 	//$messages = temp2imgcol($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+  		//'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+		'to' => 'Cd90b89c39f5a695f6d6996c80829e269',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
@@ -294,7 +295,8 @@ if (!is_null($text)) {
 	$messages = temp2comf($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+  		//'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+		'to' => 'Cd90b89c39f5a695f6d6996c80829e269',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
@@ -313,7 +315,8 @@ if (!is_null($text)) {
 	$messages = temp2caro($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+  		//'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+		'to' => 'Cd90b89c39f5a695f6d6996c80829e269',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
@@ -332,7 +335,8 @@ if (!is_null($text)) {
 	$messages = temp2imgcol($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+  		//'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+		'to' => 'Cd90b89c39f5a695f6d6996c80829e269',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
