@@ -157,7 +157,7 @@ function temp2imgcol3($replyToken)
 	$col1_act = [
 		'type' => 'postback',
 		'label' => 'Power Flow',
-		'data' => 'action=buy&itemid=111'	
+		'data' => 'action=Powerflow'	
 		];
 	$col1 = [
 		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
@@ -170,7 +170,7 @@ function temp2imgcol3($replyToken)
 	$col2_act = [
 		'type' => 'postback',
 		'label' => 'Sw.Diagram',
-		'data' => 'action=buy&itemid=111'	
+		'data' => 'action=SwitchingDiagram'	
 		];
 	$col2 = [
 		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
@@ -182,7 +182,7 @@ function temp2imgcol3($replyToken)
 	$col3_act = [
 		'type' => 'postback',
 		'label' => 'Tx.Loading',
-		'data' => 'action=buy&itemid=111'	
+		'data' => 'action=TransformerLoading'	
 		];
 	$col3 = [
 		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_3.jpg',
