@@ -121,7 +121,7 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 		}
-    // Reply only when Follow me.
+    // Reply only when MacShare.
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			$touserid = $event['source']['userId'];
 			$toroomid = $event['source']['roomId'];
@@ -131,6 +131,30 @@ if (!is_null($events['events'])) {
 			if (($text == 'MacShare') and (($togroupid == 'Cd90b89c39f5a695f6d6996c80829e269') or ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723') or ($touserid == 'U554a18dbd36996fdb3dd95c218cf6db0'))) {
 				$url = 'https://api.line.me/v2/bot/message/reply';
 				$data = temp2imgcol3($replyToken);
+				$post = json_encode($data);
+				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+				$ch = curl_init($url);
+				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+				$result = curl_exec($ch);
+				curl_close($ch);
+				echo $result . "\r\n";				
+			}	
+		}
+    // Action Postback only when MacShare.
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			$touserid = $event['source']['userId'];
+			$toroomid = $event['source']['roomId'];
+			$togroupid = $event['source']['groupId'];
+			$replyToken = $event['source']['groupId'];
+			$postbackdata = $event['postback']['data'];
+			$text = $event['message']['text'];
+			if (($text == 'MacShare') and (($togroupid == 'Cd90b89c39f5a695f6d6996c80829e269') or ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723') or ($touserid == 'U554a18dbd36996fdb3dd95c218cf6db0'))) {
+				$url = 'https://api.line.me/v2/bot/message/reply';
+				$data = data1($replyToken,$postbackdata);
 				$post = json_encode($data);
 				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 				$ch = curl_init($url);
