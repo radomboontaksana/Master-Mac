@@ -145,16 +145,13 @@ if (!is_null($events['events'])) {
 			}	
 		}
     // Action Postback only when MacShare.
-		if ($event['type'] == 'datetimepicker') {
-			$datetime = $event['mode'];
-		}
 	  	if ($event['type'] == 'postback') {
 			$touserid = $event['source']['userId'];
 			$toroomid = $event['source']['roomId'];
 			$togroupid = $event['source']['groupId'];
 			$replyToken = $event['replyToken'];
 			$timedata = $event['timestamp'];
-			$timedata = date($timedata) . "\n" . $datetime . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
+			$timedata = date($timedata) . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
 			$postbackdata = $event['postback']['data'];
 			$postbackdata = $timedata.$postbackdata;
 			//$postbackdata = "Test Postback";
