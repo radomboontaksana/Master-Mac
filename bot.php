@@ -152,13 +152,10 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			$timedata = $event['timestamp'];
 			
-			$inputDate = "2014-03-10 05:40:00";
 
-			$datetime = \DateTime::createFromFormat("Y-m-d H:i:s", $inputDate);
-
-			//$datetime->format(\DateTime::RFC3339);
 			
-			$timedata = $timedata. "\n" . $datetime->format(\DateTime::RFC3339) . "\n" .date($timedata) . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
+			$timedata = $timedata. "\n" . strtotime("now") . "\n" .date($timedata) . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
+			
 			$postbackdata = $event['postback']['data'];
 			$postbackdata = $timedata.$postbackdata;
 			//$postbackdata = "Test Postback";
