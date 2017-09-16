@@ -152,7 +152,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			$postbackdata = $event['postback']['data'];
 			//$postbackdata = "Test Postback";
-			//if (($togroupid == 'Cd90b89c39f5a695f6d6996c80829e269') or ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723') or ($touserid == 'U554a18dbd36996fdb3dd95c218cf6db0')) {
+			if (($togroupid == 'Cd90b89c39f5a695f6d6996c80829e269') or ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723') or ($touserid == 'U554a18dbd36996fdb3dd95c218cf6db0')) {
 				$url = 'https://api.line.me/v2/bot/message/reply';
 				$postbackdata = t1($postbackdata);
 				$data = data1($replyToken,$postbackdata);
@@ -167,7 +167,7 @@ if (!is_null($events['events'])) {
 				$result = curl_exec($ch);
 				curl_close($ch);
 				echo $result . "\r\n";				
-			//}	
+			}	
 		}
   }
 }
