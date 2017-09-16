@@ -160,7 +160,8 @@ function temp2imgcol3($replyToken)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col1 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
+		'imageUrl' => 'https://still-inlet-83395.herokuapp.com/img/ColMenu_1.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col1_act
@@ -172,7 +173,8 @@ function temp2imgcol3($replyToken)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col2 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
+		'imageUrl' => 'https://still-inlet-83395.herokuapp.com/img/ColMenu_2.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col2_act
@@ -183,7 +185,8 @@ function temp2imgcol3($replyToken)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col3 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_3.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_3.jpg',
+		'imageUrl' => 'https://still-inlet-83395.herokuapp.com/img/ColMenu_3.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col3_act
