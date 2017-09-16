@@ -155,7 +155,7 @@ if (!is_null($events['events'])) {
 			//$timedata = substr($timedata,0,strlen($timedata)-3)
 
 			
-			$timedata = $timedata. "\n" . strtotime("now") . "\n" .date($timedata) . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
+			$timedata = $timedata. "\n" . strtotime("now") . "\n" . ((strtotime("now") * 1000) - $timedata) . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
 			
 			$postbackdata = $event['postback']['data'];
 			$postbackdata = $timedata.$postbackdata;
