@@ -155,10 +155,10 @@ if (!is_null($events['events'])) {
 			//$timedata = substr($timedata,0,strlen($timedata)-3)
 
 			
-			$timedata = $timedata. "\n" . strtotime("now") . "\n" . ((strtotime("now") * 1000) - $timedata) . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
+			//$timedata = $timedata. "\n" . strtotime("now") . "\n" . ((strtotime("now") * 1000) - $timedata) . "\n" . mktime ( $hour, $minute, $second, $month, $day, $year, $is_dst ). "\n" . date(DATE_RFC3339) . "\n";
 			
 			$postbackdata = $event['postback']['data'];
-			$postbackdata = $timedata.$postbackdata;
+			$postbackdata = $postbackdata;
 			//$postbackdata = "Test Postback";
 			if (($togroupid == 'Cd90b89c39f5a695f6d6996c80829e269') or ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723') or ($touserid == 'U554a18dbd36996fdb3dd95c218cf6db0')) {
 				$url = 'https://api.line.me/v2/bot/message/reply';
