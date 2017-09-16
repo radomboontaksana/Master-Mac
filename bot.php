@@ -126,7 +126,7 @@ if (!is_null($events['events'])) {
 			$togroupid = $event['source']['groupId'];
 			$replyToken = $event['replyToken'];
 			$text = $event['message']['text'];
-			if (($text == 'MacShare') and ($togroupid == '123')) {
+			if (($text == 'MacShare') and ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723')) {
 				$url = 'https://api.line.me/v2/bot/message/reply';
 				$data = temp2imgcol3($replyToken);
 				$post = json_encode($data);
