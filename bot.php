@@ -123,6 +123,7 @@ if (!is_null($events['events'])) {
 		}
     // Reply only when Follow me.
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			$togroupid = $event['source']['groupId'];
 			$replyToken = $event['replyToken'];
 			$text = $event['message']['text'];
 			if ($text == 'MacShare') {
@@ -141,7 +142,7 @@ if (!is_null($events['events'])) {
 				echo $result . "\r\n";				
 			}
 			// Find User Data
-			$url = 'https://api.line.me/v2/bot/profile/'.$touserid;
+			$url = 'https://api.line.me/v2/bot/profile/'.$togroupid;
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
