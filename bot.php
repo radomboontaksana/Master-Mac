@@ -151,7 +151,7 @@ if (!is_null($events['events'])) {
 			$togroupid = $event['source']['groupId'];
 			$replyToken = $event['replyToken'];
 			$timedata = $event['timestamp'];
-			$timedata = date_format($timedata, 'U = Y-m-d H:i:s') . "\n";
+			$timedata = $timedata . "\n" . date(DATE_RFC3339) . "\n";
 			$postbackdata = $event['postback']['data'];
 			$postbackdata = $timedata.$postbackdata;
 			//$postbackdata = "Test Postback";
