@@ -145,7 +145,7 @@ if (!is_null($events['events'])) {
 			}	
 		}
     // Action Postback only when MacShare.
-		if ($event['type'] == 'postback') {
+		if ($event['type'] == 'message') {
 			$touserid = $event['source']['userId'];
 			$toroomid = $event['source']['roomId'];
 			$togroupid = $event['source']['groupId'];
