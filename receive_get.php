@@ -15,8 +15,6 @@ $text = $StrGet;
 	
 	
 if (!is_null($text)) {
-//if (!empty($_POST)){
-	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
 	$messages = t1($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
