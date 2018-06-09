@@ -1,3 +1,3 @@
 <?php
-echo "Master Mac say : Hello World";
+echo "Radomboon Taksana say : เชื่อมต่อสำเร็จคร้าาาาาบ !!!!";
 ?>
